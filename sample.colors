@@ -1,0 +1,17 @@
+BACKGROUND = color234
+BLACK = color239
+BRBLACK = color243
+RED = color132
+BRRED = color181
+GREEN = color71
+BRGREEN = color151
+YELLOW = color137
+BRYELLOW = color187
+BLUE = color67
+BRBLUE = color152
+MAGENTA = color133
+BRMAGENTA = color182
+CYAN = color72
+BRCYAN = color151
+WHITE = color246
+BRWHITE = color252

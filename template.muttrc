@@ -1,0 +1,134 @@
+# Generated .muttrc theme.
+# Based on https://git.sr.ht/~ben/cfg/tree/2b90c65225a3d7154fca2e9a723c2f5fe5ec06b8/mutt/solarized.muttrc
+# Based on https://github.com/altercation/mutt-colors-solarized/
+
+# The original by @altercation only works if mutt is linked against slang.
+# This color scheme has been modified to work with ncurses.
+
+# Highlight my name and other personally relevant strings
+color body %%YELLOW%% %%BACKGROUND%% "(shawn|chapla|shawn m\. chapla)"
+
+# Basic colors
+color normal %%BRBLUE%% %%BACKGROUND%%
+color error %%RED%% %%BACKGROUND%%
+color tilde %%WHITE%% %%BACKGROUND%%
+color message %%CYAN%% %%BACKGROUND%%
+color markers %%RED%% %%BACKGROUND%%
+color attachment default %%BACKGROUND%%
+color search %%BRMAGENTA%% %%BACKGROUND%%
+color status %%BRBLUE%% %%WHITE%%
+color indicator %%BRWHITE%% %%YELLOW%%
+color tree %%YELLOW%% %%BACKGROUND%% # arrow in threads
+color sidebar_divider %%BRBLUE%% %%BACKGROUND%%
+color prompt %%BRBLUE%% %%BACKGROUND%%
+
+# Basic monocolor screen
+mono bold bold
+mono underline underline
+mono indicator reverse
+mono error bold
+
+# Index
+color index %%RED%% %%BACKGROUND%% "~D(!~p|~p)" # deleted
+color index %%WHITE%% %%BACKGROUND%% ~F # flagged
+color index %%BRRED%% %%BACKGROUND%% ~= # duplicate messages
+color index %%BRCYAN%% %%BACKGROUND%% "~A!~N!~T!~p!~Q!~F!~D!~P" # the rest
+color index %%RED%% %%BACKGROUND%% "~A" # all messages
+color index %%BRRED%% %%BACKGROUND%% "~E" # expired messages
+color index %%BLUE%% %%BACKGROUND%% "~N" # new messages
+color index %%BLUE%% %%BACKGROUND%% "~O" # old messages
+color index %%BRMAGENTA%% %%BACKGROUND%% "~Q" # messages that have been replied to
+color index %%BRCYAN%% %%BACKGROUND%% "~R" # read messages
+color index %%BLUE%% %%BACKGROUND%% "~U" # unread messages
+color index %%BLUE%% %%BACKGROUND%% "~U~$" # unread, unreferenced messages
+color index %%BRBLUE%% %%BACKGROUND%% "~v" # messages part of a collapsed thread
+color index %%BRBLUE%% %%BACKGROUND%% "~P" # messages from me
+color index %%CYAN%% %%BACKGROUND%% "~p!~F" # messages to me
+color index %%CYAN%% %%BACKGROUND%% "~N~p!~F" # new messages to me
+color index %%CYAN%% %%BACKGROUND%% "~U~p!~F" # unread messages to me
+color index %%BRCYAN%% %%BACKGROUND%% "~R~p!~F" # messages to me
+color index %%RED%% %%BACKGROUND%% "~F" # flagged messages
+color index %%RED%% %%BACKGROUND%% "~F~p" # flagged messages to me
+color index %%RED%% %%BACKGROUND%% "~N~F" # new flagged messages
+color index %%RED%% %%BACKGROUND%% "~N~F~p" # new flagged messages to me
+color index %%RED%% %%BACKGROUND%% "~U~F~p" # new flagged messages to me
+color index %%WHITE%% %%RED%% "~D" # deleted messages
+color index %%BRGREEN%% %%BACKGROUND%% "~v~(!~N)" # collapsed thread with no unread
+color index %%YELLOW%% %%BACKGROUND%% "~v~(~N)" # collapsed thread with some unread
+color index %%GREEN%% %%BACKGROUND%% "~N~v~(~N)" # collapsed thread with unread parent
+
+# statusbg used to indicated flagged when foreground color shows other status
+# for collapsed thread
+color index %%RED%% %%WHITE%% "~v~(~F)!~N" # collapsed thread with flagged, no unread
+color index %%YELLOW%% %%WHITE%% "~v~(~F~N)" # collapsed thread with some unread & flagged
+color index %%GREEN%% %%WHITE%% "~N~v~(~F~N)" # collapsed thread with unread parent & flagged
+color index %%GREEN%% %%WHITE%% "~N~v~(~F)" # collapsed thread with unread parent, no unread inside, but some flagged
+color index %%CYAN%% %%WHITE%% "~v~(~p)" # collapsed thread with unread parent, no unread inside, some to me directly
+color index %%YELLOW%% %%RED%% "~v~(~D)" # thread with deleted (doesn't differentiate between all or partial)
+color index %%YELLOW%% %%BACKGROUND%% "~(~N)" # messages in threads with some unread
+color index %%GREEN%% %%BACKGROUND%% "~S" # superseded messages
+color index %%RED%% %%BACKGROUND%% "~T" # tagged messages
+color index %%BRRED%% %%RED%% "~=" # duplicated messages
+
+# Message headers
+color header %%BRCYAN%% %%BACKGROUND%% "^"
+color hdrdefault %%BRCYAN%% %%BACKGROUND%%
+color header %%BRBLUE%% %%BACKGROUND%% "^(From)"
+color header %%BLUE%% %%BACKGROUND%% "^(Subject)"
+
+# Message body
+color quoted %%BLUE%% %%BACKGROUND%%
+color quoted1 %%CYAN%% %%BACKGROUND%%
+color quoted2 %%YELLOW%% %%BACKGROUND%%
+color quoted3 %%RED%% %%BACKGROUND%%
+color quoted4 %%BRRED%% %%BACKGROUND%%
+
+color signature %%BRCYAN%% %%BACKGROUND%%
+color bold %%WHITE%% %%BACKGROUND%%
+color underline %%WHITE%% %%BACKGROUND%%
+color normal %%BRYELLOW%% %%BACKGROUND%%
+
+color body %%BRGREEN%% %%BACKGROUND%% "[;:][-o][)/(|]" # emoticons
+color body %%BRGREEN%% %%BACKGROUND%% "[;:][)(|]" # emoticons
+color body %%BRGREEN%% %%BACKGROUND%% "[*]?((N)?ACK|CU|LOL|SCNR|BRB|BTW|CWYL|\
+ |FWIW|vbg|GD&R|HTH|HTHBE|IMHO|IMNSHO|\
+ |IRL|RTFM|ROTFL|ROFL|YMMV)[*]?"
+color body %%BRGREEN%% %%BACKGROUND%% "[ ][*][^*]*[*][ ]?" # more emoticon?
+color body %%BRGREEN%% %%BACKGROUND%% "[ ]?[*][^*]*[*][ ]" # more emoticon?
+
+## pgp
+color body %%RED%% %%BACKGROUND%% "(BAD signature)"
+color body %%CYAN%% %%BACKGROUND%% "(Good signature)"
+color body %%BRWHITE%% %%BACKGROUND%% "^gpg: Good signature .*"
+color body %%BRBLUE%% %%BACKGROUND%% "^gpg: "
+color body %%BRBLUE%% %%RED%% "^gpg: BAD signature from.*"
+mono body bold "^gpg: Good signature"
+mono body bold "^gpg: BAD signature from.*"
+
+# yes, an insane URL regex
+color body %%RED%% %%BACKGROUND%% "([a-z][a-z0-9+-]*://(((([a-z0-9_.!~*'();:&=+$,-]|%[0-9a-f][0-9a-f])*@)?((([a-z0-9]([a-z0-9-]*[a-z0-9])?)\\.)*([a-z]([a-z0-9-]*[a-z0-9])?)\\.?|[0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+)(:[0-9]+)?)|([a-z0-9_.!~*'()$,;:@&=+-]|%[0-9a-f][0-9a-f])+)(/([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*(;([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*)*(/([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*(;([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*)*)*)?(\\?([a-z0-9_.!~*'();/?:@&=+$,-]|%[0-9a-f][0-9a-f])*)?(#([a-z0-9_.!~*'();/?:@&=+$,-]|%[0-9a-f][0-9a-f])*)?|(www|ftp)\\.(([a-z0-9]([a-z0-9-]*[a-z0-9])?)\\.)*([a-z]([a-z0-9-]*[a-z0-9])?)\\.?(:[0-9]+)?(/([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*(;([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*)*(/([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*(;([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*)*)*)?(\\?([-a-z0-9_.!~*'();/?:@&=+$,]|%[0-9a-f][0-9a-f])*)?(#([-a-z0-9_.!~*'();/?:@&=+$,]|%[0-9a-f][0-9a-f])*)?)[^].,:;!)? \t\r\n<>\"]"
+
+# and a heavy handed email regex
+color body %%RED%% %%BACKGROUND%% "((@(([0-9a-z-]+\\.)*[0-9a-z-]+\\.?|#[0-9]+|\\[[0-9]?[0-9]?[0-9]\\.[0-9]?[0-9]?[0-9]\\.[0-9]?[0-9]?[0-9]\\.[0-9]?[0-9]?[0-9]\\]),)*@(([0-9a-z-]+\\.)*[0-9a-z-]+\\.?|#[0-9]+|\\[[0-9]?[0-9]?[0-9]\\.[0-9]?[0-9]?[0-9]\\.[0-9]?[0-9]?[0-9]\\.[0-9]?[0-9]?[0-9]\\]):)?[0-9a-z_.+%$-]+@(([0-9a-z-]+\\.)*[0-9a-z-]+\\.?|#[0-9]+|\\[[0-2]?[0-9]?[0-9]\\.[0-2]?[0-9]?[0-9]\\.[0-2]?[0-9]?[0-9]\\.[0-2]?[0-9]?[0-9]\\])"
+
+# Various smilies and the like
+color body default %%BACKGROUND%% "<[Gg]>" # <g>
+color body default %%BACKGROUND%% "<[Bb][Gg]>" # <bg>
+color body %%YELLOW%% %%BACKGROUND%% " [;:]-*[})>{(<|]" # :-) etc...
+
+# *bold*
+color body %%BLUE%% %%BACKGROUND%% "(^|[[:space:][:punct:]])\\*[^*]+\\*([[:space:][:punct:]]|$)"
+mono body bold "(^|[[:space:][:punct:]])\\*[^*]+\\*([[:space:][:punct:]]|$)"
+
+# _underline_
+color body %%BLUE%% %%BACKGROUND%% "(^|[[:space:][:punct:]])_[^_]+_([[:space:][:punct:]]|$)"
+mono body underline "(^|[[:space:][:punct:]])_[^_]+_([[:space:][:punct:]]|$)"
+
+# /italic/ (Sometimes gets directory names)
+color body %%BLUE%% %%BACKGROUND%% "(^|[[:space:][:punct:]])/[^/]+/([[:space:][:punct:]]|$)"
+mono body underline "(^|[[:space:][:punct:]])/[^/]+/([[:space:][:punct:]]|$)"
+
+# Border lines.
+color body %%BLUE%% %%BACKGROUND%% "( *[-+=#*~_]){6,}"
+
+# vim: filetype=muttrc
